@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:component-scan base-package="org.university"/>
+
+    <bean id="studentBean1"
+          class="org.university.Student">
+        <constructor-arg name="name" value="studentBean1"/>
+        <constructor-arg name="performance">
+            <map>
+                <entry key="MATHEMATICS" value="5"/>
+                <entry key="LANGUAGE" value="5"/>
+                <entry key="PHYSICS" value="5"/>
+            </map>
+        </constructor-arg>
+    </bean>
+
+    <bean id="studentBean2"
+          class="org.university.Student">
+        <constructor-arg name="name" value="studentBean2"/>
+        <constructor-arg name="performance">
+            <map>
+                <entry key="MATHEMATICS" value="4"/>
+                <entry key="LANGUAGE" value="4"/>
+                <entry key="PHYSICS" value="4"/>
+            </map>
+        </constructor-arg>
+    </bean>
+
+    <bean id="studentBean3"
+          class="org.university.Student">
+        <constructor-arg name="name" value="studentBean3"/>
+        <constructor-arg name="performance">
+            <map>
+                <entry key="MATHEMATICS" value="2"/>
+                <entry key="LANGUAGE" value="2"/>
+                <entry key="PHYSICS" value="2"/>
+            </map>
+        </constructor-arg>
+    </bean>
+
+    <bean id="Jil"
+          class="org.university.Student">
+        <constructor-arg name="name" value="Jil"/>
+        <constructor-arg name="performance">
+            <map>
+                <entry key="MATHEMATICS" value="2"/>
+                <entry key="LANGUAGE" value="2"/>
+                <entry key="PHYSICS" value="2"/>
+            </map>
+        </constructor-arg>
+    </bean>
+
+    <bean class="org.configuration.JilBeanPostProcessor"/>
+
+</beans>
